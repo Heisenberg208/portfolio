@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Poornachandra A N{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Get In Touch</h1>
+        <p class="lead text-muted">
+          Let's discuss your next project or collaboration opportunity
+        </p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <!-- Contact Information -->
+        <div class="col-md-6">
+          <div class="contact-info">
+            <h3 class="h4 mb-4">Contact Information</h3>
+
+            <div class="contact-item d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="fas fa-envelope fa-lg text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Email</h5>
+                <a href="mailto:poornachandra308@gmail.com" class="text-decoration-none">
+                  poornachandra308@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="fas fa-phone fa-lg text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Phone</h5>
+                <a href="tel:8904260293" class="text-decoration-none">
+                  +91 8904260293
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Location</h5>
+                <span class="text-muted">Bengaluru, Karnataka, India</span>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links mt-4">
+              <h5 class="mb-3">Connect With Me</h5>
+              <div class="d-flex gap-3">
+                <a href="https://linkedin.com/in/Poornachandra A N" class="btn btn-outline-primary btn-sm"
+                  target="_blank">
+                  <i class="fab fa-linkedin me-1"></i>LinkedIn
+                </a>
+                <a href="https://github.com/Heisenberg208" class="btn btn-outline-dark btn-sm" target="_blank">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="#" class="btn btn-outline-info btn-sm">
+                  <i class="fas fa-globe me-1"></i>Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <div class="contact-form">
+            <h3 class="h4 mb-4">Send Me a Message</h3>
+            <form id="contactForm" action="https://formspree.io/f/mdkzpnpn">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message *</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg w-100">
+                <i class="fas fa-paper-plane me-2"></i>Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Contact Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body">
+              <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+              <h5 class="card-title">Work Opportunities</h5>
+              <p class="card-text">
+                Looking for AI/ML engineers or Python developers?
+                Let's discuss how I can contribute to your team.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body">
+              <i class="fas fa-lightbulb fa-2x text-warning mb-3"></i>
+              <h5 class="card-title">Project Collaboration</h5>
+              <p class="card-text">
+                Have an interesting project idea? I'm always excited
+                to collaborate on innovative solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body">
+              <i class="fas fa-comments fa-2x text-success mb-3"></i>
+              <h5 class="card-title">General Inquiries</h5>
+              <p class="card-text">
+                Questions about my work, experience, or just want to chat
+                about technology? Feel free to reach out.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Response Time -->
+      <div class="text-center">
+        <div class="alert alert-info" role="alert">
+          <i class="fas fa-clock me-2"></i>
+          <strong>Response Time:</strong> I typically respond to messages within 24 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

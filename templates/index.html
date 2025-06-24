@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Poornachandra A N{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <h1 class="display-4 fw-bold mb-3">Hello, I'm Poornachandra A N</h1>
+          <h2 class="h3 mb-4">AI/ML Engineer & Python Developer</h2>
+          <p class="lead mb-4">
+            Passionate about Artificial Intelligence, Machine Learning, and building innovative solutions
+            that make a difference. Currently pursuing B.E. in AI/ML with hands-on experience in
+            Python development and system engineering.
+          </p>
+          <div class="hero-buttons">
+            <a href="{{ url_for('projects') }}" class="btn btn-light btn-lg me-3">
+              <i class="fas fa-code me-2"></i>View Projects
+            </a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-envelope me-2"></i>Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="hero-image">
+          <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Poornachandra A N"
+            class="img-fluid rounded-circle profile-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Technical Skills</h2>
+      <p class="lead text-muted">Technologies and tools I work with</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <i class="fab fa-python fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">Python, HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-brain fa-3x text-success mb-3"></i>
+            <h5 class="card-title">AI/ML Frameworks</h5>
+            <p class="card-text">TensorFlow, Scikit-learn, OpenCV</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-tools fa-3x text-warning mb-3"></i>
+            <h5 class="card-title">Tools & APIs</h5>
+            <p class="card-text">Git, FastAPI, Streamlit, RESTful APIs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Highlights -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Experience Highlights</h2>
+      <p class="lead text-muted">Recent internships and professional experience</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="experience-card card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Python Developer Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">RECURSIVE ZERO (Startup)</h6>
+            <p class="card-text">
+              Contributed to backend development, worked with Git version control,
+              and developed RESTful APIs in a startup environment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="experience-card card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Systems Engineering Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Dassault Systèmes</h6>
+            <p class="card-text">
+              Worked on Modelica and Dymola for electric vehicle system simulation
+              and gained exposure to model-based design.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="experience-card card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Web Development Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">JSS Academy</h6>
+            <p class="card-text">
+              Built responsive front-end components and assisted in designing
+              institutional web applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-3">Let's Work Together</h2>
+    <p class="lead mb-4">
+      Interested in collaborating on AI/ML projects or need a Python developer?
+      Let's discuss how we can create something amazing together.
+    </p>
+    <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">
+      <i class="fas fa-paper-plane me-2"></i>Start a Conversation
+    </a>
+  </div>
+</section>
+{% endblock %}

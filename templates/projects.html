@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Poornachandra A N{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">My Projects</h1>
+    <p class="lead text-muted">A showcase of my work in AI/ML and software development</p>
+  </div>
+
+  <!-- Featured Publication -->
+  <div class="mb-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">
+          <i class="fas fa-award me-2"></i>Featured Publication
+        </h3>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Multi-Task Learning for Faux-Hate Detection in Hindi-English Code-Mixed Text</h4>
+        <p class="card-text">
+          <strong>Authors:</strong> Hitesh N P, D Ankith, Poornachandra A N, Abhilash C B<br>
+          <strong>Published:</strong> December 2024<br>
+          <strong>Conference:</strong> ICON 2024 - International Conference on Natural Language Processing
+        </p>
+        <p class="card-text">
+          This research paper presents a novel approach to detecting faux-hate in Hindi-English code-mixed text
+          using multi-task learning techniques. The work addresses the challenging problem of identifying
+          subtle forms of hate speech in multilingual social media content.
+        </p>
+        <a href="https://aclanthology.org/2024.icon-fauxhate.10.pdf" class="btn btn-primary" target="_blank">
+          <i class="fas fa-file-pdf me-2"></i>View Publication
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="row g-4">
+    {% for project in projects %}
+    <div class="col-lg-6">
+      <div class="project-card card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title text-primary mb-3">
+            <i class="fas fa-project-diagram me-2"></i>{{ project.title }}
+          </h4>
+          <p class="card-text mb-3">{{ project.description }}</p>
+
+          <!-- Tech Stack -->
+          <div class="mb-3">
+            <h6 class="text-muted mb-2">Tech Stack:</h6>
+            <div class="tech-stack">
+              {% for tech in project.tech_stack %}
+              <span class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Project Links -->
+          <div class="d-flex gap-2">
+            <a href="{{ project.github_link }}" class="btn btn-outline-dark btn-sm">
+              <i class="fab fa-github me-1"></i>GitHub
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-sm">
+              <i class="fas fa-external-link-alt me-1"></i>Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Additional Projects Section -->
+  <div class="mt-5">
+    <h2 class="h3 mb-4 text-center">Other Notable Work</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Machine Learning Models</h5>
+            <p class="card-text">
+              Developed various ML models for classification, regression, and
+              natural language processing tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-eye fa-3x text-success mb-3"></i>
+            <h5 class="card-title">Computer Vision</h5>
+            <p class="card-text">
+              Built image processing applications using OpenCV for
+              object detection and image enhancement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-server fa-3x text-warning mb-3"></i>
+            <h5 class="card-title">Backend Development</h5>
+            <p class="card-text">
+              Created RESTful APIs and backend services using Python,
+              FastAPI, and various database technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub Stats -->
+  <div class="mt-5 text-center">
+    <h2 class="h3 mb-4">GitHub Activity</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <p class="card-text mb-3">
+              Check out my latest code and contributions on GitHub
+            </p>
+            <a href="https://github.com/Heisenberg208" class="btn btn-dark btn-lg" target="_blank">
+              <i class="fab fa-github me-2"></i>Visit My GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="mt-5 p-4 bg-light rounded text-center">
+    <h3 class="mb-3">Interested in Collaboration?</h3>
+    <p class="lead mb-4">
+      I'm always open to discussing new projects, creative ideas,
+      or opportunities to be part of your vision.
+    </p>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+      <i class="fas fa-handshake me-2"></i>Let's Work Together
+    </a>
+  </div>
+</div>
+{% endblock %}

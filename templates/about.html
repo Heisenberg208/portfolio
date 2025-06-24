@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}About - Poornachandra A N{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">About Me</h1>
+        <p class="lead text-muted">Get to know more about my journey and passion</p>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="row mb-5">
+        <div class="col-md-4 text-center mb-4">
+          <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Poornachandra A N"
+            class="img-fluid rounded-circle profile-img-about">
+        </div>
+        <div class="col-md-8">
+          <h2 class="h3 mb-3">Hello, I'm Poornachandra</h2>
+          <p class="mb-3">
+            I'm a passionate AI/ML engineer and Python developer currently pursuing my B.E. in
+            Artificial Intelligence and Machine Learning from JSS Academy of Technology.
+            With a strong academic background and hands-on industry experience, I'm dedicated
+            to building innovative solutions that leverage the power of artificial intelligence.
+          </p>
+          <p class="mb-3">
+            My journey in technology began with a fascination for how machines can learn and
+            make decisions. This curiosity has driven me to explore various domains including
+            natural language processing, computer vision, and backend development.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="mb-5">
+        <h2 class="h3 mb-4"><i class="fas fa-graduation-cap text-primary me-2"></i>Education</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">B.E. AI & Machine Learning</h5>
+                <h6 class="card-subtitle mb-2 text-muted">JSS Academy of Technology</h6>
+                <p class="card-text">CGPA: 8.49 (2025)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Pre-University</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Sri Kumaran Composite Junior PU College</h6>
+                <p class="card-text">95% (2021)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="mb-5">
+        <h2 class="h3 mb-4"><i class="fas fa-code text-primary me-2"></i>Technical Expertise</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Programming Languages</h5>
+            <ul class="list-unstyled">
+              <li><i class="fab fa-python text-warning me-2"></i>Python</li>
+              <li><i class="fab fa-html5 text-danger me-2"></i>HTML</li>
+              <li><i class="fab fa-css3-alt text-primary me-2"></i>CSS</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Frameworks & Libraries</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-layer-group text-success me-2"></i>Streamlit</li>
+              <li><i class="fas fa-rocket text-info me-2"></i>FastAPI</li>
+              <li><i class="fas fa-brain text-purple me-2"></i>TensorFlow</li>
+              <li><i class="fas fa-cogs text-secondary me-2"></i>Scikit-learn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Interests -->
+      <div class="mb-5">
+        <h2 class="h3 mb-4"><i class="fas fa-heart text-danger me-2"></i>Personal Interests</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="interest-card text-center p-3 border rounded">
+              <i class="fas fa-chess fa-2x text-primary mb-2"></i>
+              <h5>Cricket</h5>
+              <p class="small text-muted">Captain of JSS Cricket Team</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="interest-card text-center p-3 border rounded">
+              <i class="fas fa-guitar fa-2x text-warning mb-2"></i>
+              <h5>Guitar</h5>
+              <p class="small text-muted">Intermediate Player</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="interest-card text-center p-3 border rounded">
+              <i class="fas fa-book fa-2x text-success mb-2"></i>
+              <h5>Reading</h5>
+              <p class="small text-muted">Self-Improvement Books</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="mb-5">
+        <h2 class="h3 mb-4"><i class="fas fa-language text-primary me-2"></i>Languages</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="language-item p-3 text-center">
+              <h5>Kannada</h5>
+              <p class="text-muted">Native</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="language-item p-3 text-center">
+              <h5>English</h5>
+              <p class="text-muted">Fluent</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="language-item p-3 text-center">
+              <h5>Hindi</h5>
+              <p class="text-muted">Conversational</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center">
+        <h3 class="mb-3">Want to know more?</h3>
+        <p class="lead mb-4">I'm always excited to discuss new opportunities and collaborations.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+          <i class="fas fa-envelope me-2"></i>Get In Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
